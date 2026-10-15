@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0b12" />
+
+  <title>Imperio Shop | Bots, Hosting y Servidores para Discord</title>
+  <meta name="description" content="Imperio Shop: bots personalizados para Discord, hosting de alto rendimiento y servidores VPS con activación inmediata y soporte 24/7." />
+  <meta name="author" content="Imperio Shop" />
+  <meta name="keywords" content="bots discord, hosting discord, servidores vps, imperio shop, bot personalizado, pterodactyl" />
+
+  <!-- Open Graph / Redes sociales -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Imperio Shop" />
+  <meta property="og:title" content="Imperio Shop | Bots, Hosting y Servidores" />
+  <meta property="og:description" content="Creamos bots para Discord, hosting de alto rendimiento y servidores VPS. Soporte 24/7 y activación inmediata." />
+  <meta property="og:image" content="/assets/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Imperio Shop | Bots, Hosting y Servidores" />
+  <meta name="twitter:description" content="Bots personalizados para Discord, hosting y servidores VPS con soporte 24/7." />
+  <meta name="twitter:image" content="/assets/og-image.jpg" />
+
+  <!-- Iconos -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon-180.png" />
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="preload" as="image" href="/assets/logo-mark.webp" />
+  <link rel="preload" as="image" href="/assets/banner.webp" />
+  <script src="/script.js" defer></script>
+</head>
+
+<body class="is-loading">
+  <a class="skip-link" href="#inicio">Saltar al contenido</a>
+
+  <!-- ================= SPRITE DE ICONOS ================= -->
+  <svg class="svg-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-bot" viewBox="0 0 24 24">
+      <rect x="4" y="8" width="16" height="11" rx="3.5" />
+      <path d="M12 8V4.5" /><circle cx="12" cy="3.4" r="1.4" />
+      <circle cx="9" cy="13" r="1.4" /><circle cx="15" cy="13" r="1.4" />
+      <path d="M9.5 16.5h5" /><path d="M2.5 12v3M21.5 12v3" />
+    </symbol>
+    <symbol id="i-server" viewBox="0 0 24 24">
+      <rect x="3" y="4" width="18" height="6" rx="2" />
+      <rect x="3" y="14" width="18" height="6" rx="2" />
+      <path d="M7 7h.01M7 17h.01" /><path d="M12 7h5M12 17h5" />
+    </symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24">
+      <path d="M17.5 19a4.5 4.5 0 0 0 .4-8.98A6 6 0 0 0 6.2 11.2A3.9 3.9 0 0 0 7 19h10.5Z" />
+      <path d="M12 15v-3M10.4 13.4 12 11.8l1.6 1.6" />
+    </symbol>
+    <symbol id="i-code" viewBox="0 0 24 24">
+      <path d="M9 8 5 12l4 4M15 8l4 4-4 4" />
+    </symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24">
+      <path d="M12 3l7 3v6c0 4.2-2.9 7.6-7 9-4.1-1.4-7-4.8-7-9V6l7-3Z" />
+      <path d="M9 12.3l2 2 4-4.2" />
+    </symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24">
+      <path d="M13.5 3 6 13.5h5L10.5 21 18 10.5h-5L13.5 3Z" />
+    </symbol>
+    <symbol id="i-headset" viewBox="0 0 24 24">
+      <path d="M4 13v-1a8 8 0 0 1 16 0v1" />
+      <rect x="2.5" y="13" width="4.5" height="7" rx="2" />
+      <rect x="17" y="13" width="4.5" height="7" rx="2" />
+      <path d="M19 20v.5a2.5 2.5 0 0 1-2.5 2.5H13" />
+    </symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24">
+      <path d="M3 5h2.2l2.3 10.2a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 2-1.55L21 8H6" />
+      <circle cx="10" cy="20" r="1.4" /><circle cx="18" cy="20" r="1.4" />
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5" /></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" /></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" /></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+    <symbol id="i-ticket" viewBox="0 0 24 24">
+      <path d="M3 8.5A2.5 2.5 0 0 1 5.5 6h13A2.5 2.5 0 0 1 21 8.5v1a2.5 2.5 0 0 0 0 5v1A2.5 2.5 0 0 1 18.5 18h-13A2.5 2.5 0 0 1 3 15.5v-1a2.5 2.5 0 0 0 0-5v-1Z" />
+      <path d="M12 7v10" stroke-dasharray="2 2.5" />
+    </symbol>
+    <symbol id="i-star" viewBox="0 0 24 24">
+      <path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1 5.9-5.2-2.8-5.2 2.8 1-5.9L3.5 9.8l5.9-.8L12 3.6Z" />
+    </symbol>
+  </svg>
+
+  <!-- Halo que sigue al cursor (desktop) -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ================= PUERTA DE VERIFICACIÓN ================= -->
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gateTitle">
+    <div class="gate__glow" aria-hidden="true"></div>
+    <article class="card gate__card">
+      <div class="avatar-container">
+        <img src="/assets/logo-mark.webp" alt="Imperio Shop" width="75" height="75" />
+      </div>
+
+      <span class="card__eyebrow">Acceso seguro</span>
+      <h1 id="gateTitle">Verificando tu sesión</h1>
+      <p class="subtitle">
+        Estamos comprobando tu navegador y tu conexión antes de llevarte al centro de
+        ventas de <strong>Imperio Shop</strong>. No cierres esta ventana.
+      </p>
+
+      <div class="progress-bar-bg" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar" aria-label="Progreso de verificación">
+        <div class="progress-bar-fill" id="progress"></div>
+      </div>
+
+      <div class="progress-meta">
+        <span id="gatePercent">0%</span>
+        <span class="progress-meta__status" id="gateStatus">Iniciando…</span>
+      </div>
+
+      <div class="steps-container">
+        <div class="step" id="step1">
+          <span class="step__dot"><svg class="ic"><use href="#i-check" /></svg></span>
+          <span class="step__text">Leyendo navegador</span>
+        </div>
+        <div class="step" id="step2">
+          <span class="step__dot"><svg class="ic"><use href="#i-check" /></svg></span>
+          <span class="step__text">Analizando conexión</span>
+        </div>
+        <div class="step" id="step3">
+          <span class="step__dot"><svg class="ic"><use href="#i-check" /></svg></span>
+          <span class="step__text">Comparando registro</span>
+        </div>
+      </div>
+
+      <pre class="gate__log" id="gateLog" aria-live="polite"></pre>
+
+      <div class="gate__actions">
+        <button type="button" class="btn btn--primary btn--block" id="gateSkip">
+          Ver la tienda ahora
+        </button>
+      </div>
+
+      <p class="card__foot">
+        <svg class="ic"><use href="#i-shield" /></svg>
+        Conexión cifrada · Verificación local, no guardamos datos personales
+      </p>
+    </article>
+  </div>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="#inicio" aria-label="Imperio Shop, ir al inicio">
+        <img src="/assets/logo-mark.webp" alt="" class="brand__mark" width="42" height="42" />
+        <span class="brand__text">
+          <strong>IMPERIO</strong><span>SHOP</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="navMenu" aria-label="Navegación principal">
+        <a class="nav-link is-active" href="#inicio">Inicio</a>
+        <a class="nav-link" href="#servicios">Servicios</a>
+        <a class="nav-link" href="#panel">Panel del bot</a>
+        <a class="nav-link" href="#planes">Planes</a>
+        <a class="nav-link" href="#faq">Preguntas</a>
+        <a class="btn btn--primary btn--sm nav__cta" href="https://discord.gg/imperioshop" data-discord target="_blank" rel="noopener">
+          <svg class="ic"><use href="#i-bot" /></svg> Unirse al Discord
+        </a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menú">
+        <svg class="ic ic--menu"><use href="#i-menu" /></svg>
+        <svg class="ic ic--close"><use href="#i-close" /></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="inicio">
+      <div class="hero__bg" aria-hidden="true">
+        <span class="orb orb--1"></span>
+        <span class="orb orb--2"></span>
+        <img class="hero__watermark" src="/assets/logo-patern.webp" alt="" />
+      </div>
+
+      <div class="wrap hero__inner">
+        <div class="hero__copy">
+          <span class="pill pill--live">
+            <span class="pill__dot"></span> Delivery inmediato · Soporte 24/7
+          </span>
+
+          <h1 class="hero__title">
+            Bots, hosting y servidores
+            <span class="grad">con nivel de imperio</span>
+          </h1>
+
+          <p class="hero__text">
+            Desarrollamos bots personalizados para Discord, montamos tu hosting con
+            panel propio y te damos servidores rápidos, estables y listos para escalar.
+            Todo con activación inmediata y acompañamiento real.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary btn--lg" href="#planes">
+              <svg class="ic"><use href="#i-cart" /></svg> Ver planes y precios
+            </a>
+            <a class="btn btn--ghost btn--lg" href="https://discord.gg/imperioshop" data-discord target="_blank" rel="noopener">
+              <svg class="ic"><use href="#i-bot" /></svg> Hablar con soporte
+            </a>
+          </div>
+
+          <ul class="hero__trust">
+            <li><svg class="ic"><use href="#i-bolt" /></svg> Activación en minutos</li>
+            <li><svg class="ic"><use href="#i-shield" /></svg> Uptime 99.9%</li>
+            <li><svg class="ic"><use href="#i-headset" /></svg> Atención humana</li>
+          </ul>
+
+          <dl class="stats">
+            <div class="stats__item">
+              <dt class="stats__label">Comunidades atendidas</dt>
+              <dd class="stats__value"><span data-count="1850" data-suffix="+">0</span></dd>
+            </div>
+            <div class="stats__item">
+              <dt class="stats__label">Bots entregados</dt>
+              <dd class="stats__value"><span data-count="940" data-suffix="+">0</span></dd>
+            </div>
+            <div class="stats__item">
+              <dt class="stats__label">Uptime del hosting</dt>
+              <dd class="stats__value"><span data-count="99.9" data-decimals="1" data-suffix="%">0</span></dd>
+            </div>
+            <div class="stats__item">
+              <dt class="stats__label">Valoración media</dt>
+              <dd class="stats__value"><span data-count="4.9" data-decimals="1" data-suffix="/5">0</span></dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero__visual reveal">
+          <div class="showcase">
+            <div class="showcase__bar">
+              <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+              <span class="showcase__url">imperioshop.discord.app</span>
+            </div>
+
+            <img class="showcase__banner" src="/assets/banner.webp" alt="Imperio Shop: bots, hosting y servidores" width="680" height="240" data-src-2x="/assets/banner@2x.webp" />
+
+            <div class="showcase__panel">
+              <div class="mock">
+                <div class="mock__head">
+                  <img src="/assets/logo-mark.webp" alt="" width="26" height="26" />
+                  <span class="mock__name">Imperio Bot</span>
+                  <span class="mock__tag">BOT</span>
+                  <span class="mock__status">en línea</span>
+                </div>
+                <div class="mock__body" id="mockBody">
+                  <div class="msg msg--user">
+                    <span class="msg__avatar">tú</span>
+                    <div class="msg__content"><p>!tienda</p></div>
+                  </div>
+                  <div class="msg msg--bot">
+                    <span class="msg__avatar">IB</span>
+                    <div class="msg__content">
+                      <p><strong>Bienvenido al Imperio Shop</strong></p>
+                      <div class="msg__embed">
+                        <span class="msg__embed-title">Catálogo disponible</span>
+                        <ul>
+                          <li>Bots personalizados</li>
+                          <li>Hosting para bots</li>
+                          <li>Servidores VPS</li>
+                        </ul>
+                        <div class="msg__buttons">
+                          <span class="mock-btn mock-btn--primary">Abrir ticket</span>
+                          <span class="mock-btn">Ver planes</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mock__input">
+                  <span class="mock__placeholder">Escribe un comando…</span>
+                  <span class="mock__send"><svg class="ic"><use href="#i-arrow" /></svg></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="float-card float-card--1">
+            <svg class="ic"><use href="#i-bolt" /></svg>
+            <div><strong>Deploy listo</strong><span>en 2 min 41 s</span></div>
+          </div>
+          <div class="float-card float-card--2">
+            <svg class="ic"><use href="#i-ticket" /></svg>
+            <div><strong>Ticket #2481</strong><span>resuelto hoy</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TICKER ================= -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track" id="tickerTrack">
+        <div class="ticker__group">
+          <span>BOTS</span><i>|</i><span>HOSTING</span><i>|</i><span>SERVIDORES</span><i>|</i>
+          <span>PANEL PTERODACTYL</span><i>|</i><span>SOPORTE 24/7</span><i>|</i>
+          <span>ACTIVACIÓN INMEDIATA</span><i>|</i>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= SERVICIOS ================= -->
+    <section class="section" id="servicios">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <span class="pill">Servicios</span>
+          <h2 class="section__title">Todo lo que tu comunidad necesita</h2>
+          <p class="section__text">
+            Un solo proveedor para el bot, el hosting y la infraestructura. Menos
+            proveedores, menos problemas, más velocidad.
+          </p>
+        </header>
+
+        <div class="grid grid--3">
+          <article class="service tilt reveal">
+            <span class="service__icon"><svg class="ic"><use href="#i-bot" /></svg></span>
+            <h3>Bots personalizados</h3>
+            <p>Moderación, economía, tickets, música y automatizaciones hechas a medida de tu servidor.</p>
+            <ul class="service__list">
+              <li><svg class="ic"><use href="#i-check" /></svg> Comandos slash</li>
+              <li><svg class="ic"><use href="#i-check" /></svg> Panel web incluido</li>
+              <li><svg class="ic"><use href="#i-check" /></svg> Código tuyo, sin alquiler</li>
+            </ul>
+          </article>
+
+          <article class="service tilt reveal">
+            <span class="service__icon"><svg class="ic"><use href="#i-cloud" /></svg></span>
+            <h3>Hosting para bots</h3>
+            <p>Alojamiento continuo para bots de Discord y Node.js con reinicio automático y backups.</p>
+            <ul class="service__list">
+              <li><svg class="ic"><use href="#i-check" /></svg> Node.js, Python, Java</li>
+              <li><svg class="ic"><use href="#i-check" /></svg> Backups programados</li>
+              <li><svg class="ic"><use href="#i-check" /></svg> Consola en vivo</li>
+            </ul>
+          </article>
+
+          <article class="service tilt reveal">
+            <span class="service__icon"><svg class="ic"><use href="#i-server" /></svg></span>
+            <h3>Servidores VPS</h3>
+            <p>Máquinas NVMe con IP dedicada, panel de control y protección anti-DDoS activa.</p>
+            <ul class="service__list">
+              <li><svg class="ic"><use href="#i-check" /></svg> Discos NVMe</li>
+              <li><svg class="ic"><use href="#i-check" /></svg> Anti-DDoS incluido</li>
+              <li><svg class="ic"><use href="#i-check" /></svg> Escalado sin migrar</li>
+            </ul>
+          </article>
+
+          <article class="service tilt reveal">
+            <span class="service__icon"><svg class="ic"><use href="#i-code" /></svg></span>
+            <h3>Desarrollo web</h3>
+            <p>Landings, dashboards y tiendas conectadas a Discord con pagos y entregas automáticas.</p>
+            <ul class="service__list">
+              <li><svg class="ic"><use href="#i-check" /></svg> Diseño responsive</li>
+              <li><svg class="ic"><use href="#i-check" /></svg> SEO y velocidad</li>
+              <li><svg class="ic"><use href="#i-check" /></svg> Integración con bots</li>
+            </ul>
+          </article>
+
+          <article class="service tilt reveal">
+            <span class="service__icon"><svg class="ic"><use href="#i-bolt" /></svg></span>
+            <h3>Herramientas premium</h3>
+            <p>Nitro, boosts, plugins y recursos para llevar la experiencia de tu comunidad al siguiente nivel.</p>
+            <ul class="service__list">
+              <li><svg class="ic"><use href="#i-check" /></svg> Entrega inmediata</li>
+              <li><svg class="ic"><use href="#i-check" /></svg> Garantía de reemplazo</li>
+              <li><svg class="ic"><use href="#i-check" /></svg> Stock verificado</li>
+            </ul>
+          </article>
+
+          <article class="service tilt reveal">
+            <span class="service__icon"><svg class="ic"><use href="#i-headset" /></svg></span>
+            <h3>Soporte y mantenimiento</h3>
+            <p>Monitoreo, actualizaciones y ayuda directa por Discord cuando algo necesita atención.</p>
+            <ul class="service__list">
+              <li><svg class="ic"><use href="#i-check" /></svg> Soporte 24/7</li>
+              <li><svg class="ic"><use href="#i-check" /></svg> Monitoreo activo</li>
+              <li><svg class="ic"><use href="#i-check" /></svg> Actualizaciones incluidas</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PANEL DEL BOT ================= -->
+    <section class="section section--panel" id="panel">
+      <div class="wrap split">
+        <div class="split__copy reveal">
+          <span class="pill">Panel del bot</span>
+          <h2 class="section__title">Un bot que se entiende solo</h2>
+          <p class="section__text">
+            Comandos claros, respuestas rápidas y un panel privado para que veas ventas,
+            tickets y estado del hosting sin depender de nadie.
+          </p>
+
+          <ul class="feature-list">
+            <li>
+              <span class="feature-list__icon"><svg class="ic"><use href="#i-cart" /></svg></span>
+              <div><strong>Tienda dentro de Discord</strong><span>Productos, pagos y entrega automática en un mismo flujo.</span></div>
+            </li>
+            <li>
+              <span class="feature-list__icon"><svg class="ic"><use href="#i-ticket" /></svg></span>
+              <div><strong>Tickets ordenados</strong><span>Un canal por caso, con historial y tiempos de respuesta visibles.</span></div>
+            </li>
+            <li>
+              <span class="feature-list__icon"><svg class="ic"><use href="#i-shield" /></svg></span>
+              <div><strong>Moderación inteligente</strong><span>Antispam, automod y registros claros de cada sanción.</span></div>
+            </li>
+            <li>
+              <span class="feature-list__icon"><svg class="ic"><use href="#i-server" /></svg></span>
+              <div><strong>Estado del hosting</strong><span>Uso de CPU, RAM y uptime a un comando de distancia.</span></div>
+            </li>
+          </ul>
+
+          <a class="btn btn--primary" href="https://discord.gg/imperioshop" data-discord target="_blank" rel="noopener">
+            <svg class="ic"><use href="#i-bot" /></svg> Probar el bot ahora
+          </a>
+        </div>
+
+        <div class="split__visual reveal">
+          <div class="console">
+            <div class="console__tabs" role="tablist" aria-label="Comandos de ejemplo">
+              <button class="console__tab is-active" role="tab" aria-selected="true" data-cmd="!tienda">!tienda</button>
+              <button class="console__tab" role="tab" aria-selected="false" data-cmd="!panel">!panel</button>
+              <button class="console__tab" role="tab" aria-selected="false" data-cmd="!status">!status</button>
+              <button class="console__tab" role="tab" aria-selected="false" data-cmd="!soporte">!soporte</button>
+            </div>
+            <div class="console__screen">
+              <div class="console__titlebar">
+                <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+                <span class="console__path">imperio-bot · consola</span>
+              </div>
+              <pre class="console__out" id="consoleOut" aria-live="polite"></pre>
+            </div>
+            <div class="console__foot">
+              <span class="ok"><svg class="ic"><use href="#i-check" /></svg> 41.8 ms</span>
+              <span>shard 1/1</span>
+              <span>uptime 27 d</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FRANJA CTA CON BANNER ================= -->
+    <section class="cta-strip">
+      <div class="wrap cta-strip__inner reveal">
+        <img class="cta-strip__banner" src="/assets/banner.webp" alt="Imperio Shop" width="680" height="240" />
+        <div class="cta-strip__copy">
+          <h2>¿Listo para montar tu imperio?</h2>
+          <p>Cuéntanos qué necesitas y te preparamos una propuesta clara en minutos.</p>
+        </div>
+        <a class="btn btn--primary btn--lg" href="https://discord.gg/imperioshop" data-discord target="_blank" rel="noopener">
+          <svg class="ic"><use href="#i-bot" /></svg> Entrar al Discord
+        </a>
+      </div>
+    </section>
+
+    <!-- ================= PLANES ================= -->
+    <section class="section" id="planes">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <span class="pill">Planes</span>
+          <h2 class="section__title">Precios claros, sin sorpresas</h2>
+          <p class="section__text">Elige el punto de partida; puedes cambiar de plan cuando quieras.</p>
+
+          <div class="billing" role="group" aria-label="Ciclo de facturación">
+            <button class="billing__btn is-active" data-cycle="monthly" type="button">Mensual</button>
+            <button class="billing__btn" data-cycle="yearly" type="button">Anual <span class="billing__save">-20%</span></button>
+          </div>
+        </header>
+
+        <div class="grid grid--3 plans">
+          <article class="plan reveal">
+            <header class="plan__head">
+              <h3>Inicial</h3>
+              <p class="plan__desc">Para empezar con tu primera comunidad.</p>
+              <p class="plan__price">
+                <span class="plan__currency">$</span><span class="plan__amount" data-monthly="7" data-yearly="5.6">7</span>
+                <span class="plan__period">/mes</span>
+              </p>
+            </header>
+            <ul class="plan__features">
+              <li><svg class="ic"><use href="#i-check" /></svg> Bot con comandos esenciales</li>
+              <li><svg class="ic"><use href="#i-check" /></svg> Hosting 1 GB RAM</li>
+              <li><svg class="ic"><use href="#i-check" /></svg> Backups semanales</li>
+              <li><svg class="ic"><use href="#i-check" /></svg> Soporte por tickets</li>
+            </ul>
+            <a class="btn btn--ghost btn--block" href="https://discord.gg/imperioshop" data-discord target="_blank" rel="noopener">Empezar</a>
+          </article>
+
+          <article class="plan plan--featured reveal">
+            <span class="plan__badge"><svg class="ic"><use href="#i-star" /></svg> Más elegido</span>
+            <header class="plan__head">
+              <h3>Imperio</h3>
+              <p class="plan__desc">El equilibrio ideal entre potencia y precio.</p>
+              <p class="plan__price">
+                <span class="plan__currency">$</span><span class="plan__amount" data-monthly="19" data-yearly="15.2">19</span>
+                <span class="plan__period">/mes</span>
+              </p>
+            </header>
+            <ul class="plan__features">
+              <li><svg class="ic"><use href="#i-check" /></svg> Bot personalizado completo</li>
+              <li><svg class="ic"><use href="#i-check" /></svg> Hosting 4 GB RAM + NVMe</li>
+              <li><svg class="ic"><use href="#i-check" /></svg> Panel web privado</li>
+              <li><svg class="ic"><use href="#i-check" /></svg> Backups diarios</li>
+              <li><svg class="ic"><use href="#i-check" /></svg> Soporte prioritario 24/7</li>
+            </ul>
+            <a class="btn btn--primary btn--block" href="https://discord.gg/imperioshop" data-discord target="_blank" rel="noopener">Contratar Imperio</a>
+          </article>
+
+          <article class="plan reveal">
+            <header class="plan__head">
+              <h3>Corporativo</h3>
+              <p class="plan__desc">Infraestructura dedicada y desarrollo a medida.</p>
+              <p class="plan__price">
+                <span class="plan__currency">$</span><span class="plan__amount" data-monthly="49" data-yearly="39.2">49</span>
+                <span class="plan__period">/mes</span>
+              </p>
+            </header>
+            <ul class="plan__features">
+              <li><svg class="ic"><use href="#i-check" /></svg> VPS dedicado 8 GB RAM</li>
+              <li><svg class="ic"><use href="#i-check" /></svg> Desarrollo a medida</li>
+              <li><svg class="ic"><use href="#i-check" /></svg> Anti-DDoS avanzado</li>
+              <li><svg class="ic"><use href="#i-check" /></svg> Monitoreo y alertas</li>
+              <li><svg class="ic"><use href="#i-check" /></svg> Gestor de cuenta</li>
+            </ul>
+            <a class="btn btn--ghost btn--block" href="https://discord.gg/imperioshop" data-discord target="_blank" rel="noopener">Hablar con ventas</a>
+          </article>
+        </div>
+
+        <p class="plans__note reveal">
+          <svg class="ic"><use href="#i-shield" /></svg>
+          Todos los planes incluyen garantía de 7 días y migración sin costo.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= MÉTRICAS / MARCAS ================= -->
+    <section class="marquee-brand reveal" aria-label="Tecnologías que usamos">
+      <div class="wrap marquee-brand__inner">
+        <span>Node.js</span><span>Python</span><span>MySQL</span><span>MongoDB</span>
+        <span>Pterodactyl</span><span>Docker</span><span>Redis</span><span>Cloudflare</span>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="section" id="faq">
+      <div class="wrap wrap--narrow">
+        <header class="section__head reveal">
+          <span class="pill">Preguntas frecuentes</span>
+          <h2 class="section__title">Dudas antes de comprar</h2>
+        </header>
+
+        <div class="faq" id="faqList">
+          <article class="faq__item reveal">
+            <button class="faq__q" type="button" aria-expanded="false">
+              <span>¿Cuánto tarda la entrega de un bot?</span>
+              <svg class="ic faq__chevron"><use href="#i-arrow" /></svg>
+            </button>
+            <div class="faq__a"><p>Los bots base se entregan en minutos con invitación y configuración incluida. Los desarrollos a medida suelen tomar entre 24 y 72 horas según el alcance.</p></div>
+          </article>
+
+          <article class="faq__item reveal">
+            <button class="faq__q" type="button" aria-expanded="false">
+              <span>¿El código del bot queda a mi nombre?</span>
+              <svg class="ic faq__chevron"><use href="#i-arrow" /></svg>
+            </button>
+            <div class="faq__a"><p>Sí. En los planes con desarrollo personalizado recibes el código fuente y el repositorio queda bajo tu control, sin dependencias ocultas.</p></div>
+          </article>
+
+          <article class="faq__item reveal">
+            <button class="faq__q" type="button" aria-expanded="false">
+              <span>¿Puedo migrar mi bot desde otro hosting?</span>
+              <svg class="ic faq__chevron"><use href="#i-arrow" /></svg>
+            </button>
+            <div class="faq__a"><p>Claro. Nuestro equipo revisa tus archivos, bases de datos y variables de entorno, y ejecuta la migración sin costo para que no pierdas datos ni tiempo de actividad.</p></div>
+          </article>
+
+          <article class="faq__item reveal">
+            <button class="faq__q" type="button" aria-expanded="false">
+              <span>¿Qué métodos de pago aceptan?</span>
+              <svg class="ic faq__chevron"><use href="#i-arrow" /></svg>
+            </button>
+            <div class="faq__a"><p>Aceptamos pagos digitales y transferencias. Dentro del Discord encontrarás un canal de pagos con instrucciones actualizadas y facturación automática.</p></div>
+          </article>
+
+          <article class="faq__item reveal">
+            <button class="faq__q" type="button" aria-expanded="false">
+              <span>¿Cuál es la garantía y el soporte real?</span>
+              <svg class="ic faq__chevron"><use href="#i-arrow" /></svg>
+            </button>
+            <div class="faq__a"><p>Ofrecemos 7 días de garantía y soporte 24/7 por Discord. Los tiempos de primera respuesta suelen ser menores a 10 minutos en horario habitual.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACTO ================= -->
+    <section class="section section--contact" id="contacto">
+      <div class="wrap contact reveal">
+        <div class="contact__copy">
+          <span class="pill">Contacto</span>
+          <h2 class="section__title">Hablemos de tu proyecto</h2>
+          <p class="section__text">
+            Escríbenos por Discord y un humano del equipo te responde. Sin bots
+            intermedios ni respuestas automáticas.
+          </p>
+          <div class="contact__actions">
+            <a class="btn btn--primary" href="https://discord.gg/imperioshop" data-discord target="_blank" rel="noopener">
+              <svg class="ic"><use href="#i-bot" /></svg> Abrir ticket en Discord
+            </a>
+            <button class="btn btn--ghost" type="button" id="copyDiscord" data-copy="discord.gg/imperioshop">
+              <svg class="ic"><use href="#i-ticket" /></svg> <span id="copyLabel">Copiar invitación</span>
+            </button>
+          </div>
+        </div>
+
+        <ul class="contact__cards">
+          <li><svg class="ic"><use href="#i-headset" /></svg><div><strong>Soporte</strong><span>Respuesta media: 8 min</span></div></li>
+          <li><svg class="ic"><use href="#i-bolt" /></svg><div><strong>Entrega</strong><span>Activación inmediata</span></div></li>
+          <li><svg class="ic"><use href="#i-shield" /></svg><div><strong>Garantía</strong><span>7 días de cobertura</span></div></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <div class="site-footer__brand">
+        <img src="/assets/logo.webp" alt="Imperio Shop" class="site-footer__logo" width="200" height="212" />
+        <p>Bots, hosting y servidores para comunidades que quieren crecer rápido y sin dolores de cabeza.</p>
+      </div>
+
+      <nav class="site-footer__col" aria-label="Secciones">
+        <h3>Secciones</h3>
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#planes">Planes</a>
+        <a href="#faq">Preguntas</a>
+      </nav>
+
+      <nav class="site-footer__col" aria-label="Servicios">
+        <h3>Servicios</h3>
+        <a href="#servicios">Bots para Discord</a>
+        <a href="#servicios">Hosting de bots</a>
+        <a href="#servicios">Servidores VPS</a>
+        <a href="#servicios">Desarrollo web</a>
+      </nav>
+
+      <div class="site-footer__col">
+        <h3>Comunidad</h3>
+        <a href="https://discord.gg/imperioshop" data-discord target="_blank" rel="noopener">Discord oficial</a>
+        <a href="#contacto">Soporte</a>
+        <a href="#planes">Estado del servicio</a>
+      </div>
+    </div>
+
+    <div class="wrap site-footer__bottom">
+      <p>&copy; <span id="year">2026</span> Imperio Shop. Todos los derechos reservados.</p>
+      <p class="site-footer__legal">Hecho con dedicación para la comunidad hispana de Discord.</p>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Volver arriba">
+    <svg class="ic"><use href="#i-arrow" /></svg>
+  </button>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
