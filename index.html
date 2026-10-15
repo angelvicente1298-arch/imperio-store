@@ -35,7 +35,9 @@
   <link rel="preload" as="image" href="/assets/logo-mark.webp" />
   <link rel="preload" as="image" href="/assets/banner.webp" />
   <script src="/script.js" defer></script>
-</head>
+    <!-- Checkout oficial de Tebex: el pago se carga en su marco seguro. -->
+    <script defer src="https://js.tebex.io/v/1.js"></script>
+  </head>
 
 <body class="is-loading">
   <a class="skip-link" href="#inicio">Saltar al contenido</a>
@@ -164,7 +166,7 @@
         <a class="nav-link" href="#panel">Panel del bot</a>
         <a class="nav-link" href="#planes">Planes</a>
         <a class="nav-link" href="#faq">Preguntas</a>
-        <a class="btn btn--primary btn--sm nav__cta" href="https://discord.gg/imperioshop" data-discord target="_blank" rel="noopener">
+        <a class="btn btn--primary btn--sm nav__cta" href="https://discord.gg/cffbceYF2" data-discord target="_blank" rel="noopener">
           <svg class="ic"><use href="#i-bot" /></svg> Unirse al Discord
         </a>
       </nav>
@@ -206,7 +208,7 @@
             <a class="btn btn--primary btn--lg" href="#planes">
               <svg class="ic"><use href="#i-cart" /></svg> Ver planes y precios
             </a>
-            <a class="btn btn--ghost btn--lg" href="https://discord.gg/imperioshop" data-discord target="_blank" rel="noopener">
+            <a class="btn btn--ghost btn--lg" href="https://discord.gg/cffbceYF2" data-discord target="_blank" rel="noopener">
               <svg class="ic"><use href="#i-bot" /></svg> Hablar con soporte
             </a>
           </div>
@@ -421,7 +423,7 @@
             </li>
           </ul>
 
-          <a class="btn btn--primary" href="https://discord.gg/imperioshop" data-discord target="_blank" rel="noopener">
+          <a class="btn btn--primary" href="https://discord.gg/cffbceYF2" data-discord target="_blank" rel="noopener">
             <svg class="ic"><use href="#i-bot" /></svg> Probar el bot ahora
           </a>
         </div>
@@ -459,7 +461,7 @@
           <h2>¿Listo para montar tu imperio?</h2>
           <p>Cuéntanos qué necesitas y te preparamos una propuesta clara en minutos.</p>
         </div>
-        <a class="btn btn--primary btn--lg" href="https://discord.gg/imperioshop" data-discord target="_blank" rel="noopener">
+        <a class="btn btn--primary btn--lg" href="https://discord.gg/cffbceYF2" data-discord target="_blank" rel="noopener">
           <svg class="ic"><use href="#i-bot" /></svg> Entrar al Discord
         </a>
       </div>
@@ -469,82 +471,193 @@
     <section class="section" id="planes">
       <div class="wrap">
         <header class="section__head reveal">
-          <span class="pill">Planes</span>
-          <h2 class="section__title">Precios claros, sin sorpresas</h2>
-          <p class="section__text">Elige el punto de partida; puedes cambiar de plan cuando quieras.</p>
-
-          <div class="billing" role="group" aria-label="Ciclo de facturación">
-            <button class="billing__btn is-active" data-cycle="monthly" type="button">Mensual</button>
-            <button class="billing__btn" data-cycle="yearly" type="button">Anual <span class="billing__save">-20%</span></button>
-          </div>
+          <span class="pill">Precios</span>
+          <h2 class="section__title">Nuestro catálogo completo</h2>
+          <p class="section__text">
+            Estos son los precios reales de nuestra tienda en Tebex. Elige el servicio y
+            revisa los planes disponibles; el pago se hace dentro de Tebex con tarjeta,
+            PayPal o Google Pay.
+          </p>
         </header>
 
-        <div class="grid grid--3 plans">
-          <article class="plan reveal">
-            <header class="plan__head">
-              <h3>Inicial</h3>
-              <p class="plan__desc">Para empezar con tu primera comunidad.</p>
-              <p class="plan__price">
-                <span class="plan__currency">$</span><span class="plan__amount" data-monthly="7" data-yearly="5.6">7</span>
-                <span class="plan__period">/mes</span>
-              </p>
-            </header>
-            <ul class="plan__features">
-              <li><svg class="ic"><use href="#i-check" /></svg> Bot con comandos esenciales</li>
-              <li><svg class="ic"><use href="#i-check" /></svg> Hosting 1 GB RAM</li>
-              <li><svg class="ic"><use href="#i-check" /></svg> Backups semanales</li>
-              <li><svg class="ic"><use href="#i-check" /></svg> Soporte por tickets</li>
-            </ul>
-            <a class="btn btn--ghost btn--block" href="https://discord.gg/imperioshop" data-discord target="_blank" rel="noopener">Empezar</a>
-          </article>
+        <div class="tabs" role="tablist" aria-label="Servicios">
+            <button class="tabs__btn is-active" type="button" data-tab="bots" role="tab" aria-selected="true"><svg class="ic"><use href="#i-bot" /></svg> Bots para Discord</button>
+            <button class="tabs__btn" type="button" data-tab="hosting" role="tab" aria-selected="false"><svg class="ic"><use href="#i-server" /></svg> Hosting</button>
+            <button class="tabs__btn" type="button" data-tab="web" role="tab" aria-selected="false"><svg class="ic"><use href="#i-code" /></svg> Páginas web</button>
+        </div>
 
-          <article class="plan plan--featured reveal">
-            <span class="plan__badge"><svg class="ic"><use href="#i-star" /></svg> Más elegido</span>
-            <header class="plan__head">
-              <h3>Imperio</h3>
-              <p class="plan__desc">El equilibrio ideal entre potencia y precio.</p>
-              <p class="plan__price">
-                <span class="plan__currency">$</span><span class="plan__amount" data-monthly="19" data-yearly="15.2">19</span>
-                <span class="plan__period">/mes</span>
-              </p>
-            </header>
-            <ul class="plan__features">
-              <li><svg class="ic"><use href="#i-check" /></svg> Bot personalizado completo</li>
-              <li><svg class="ic"><use href="#i-check" /></svg> Hosting 4 GB RAM + NVMe</li>
-              <li><svg class="ic"><use href="#i-check" /></svg> Panel web privado</li>
-              <li><svg class="ic"><use href="#i-check" /></svg> Backups diarios</li>
-              <li><svg class="ic"><use href="#i-check" /></svg> Soporte prioritario 24/7</li>
-            </ul>
-            <a class="btn btn--primary btn--block" href="https://discord.gg/imperioshop" data-discord target="_blank" rel="noopener">Contratar Imperio</a>
-          </article>
-
-          <article class="plan reveal">
-            <header class="plan__head">
-              <h3>Corporativo</h3>
-              <p class="plan__desc">Infraestructura dedicada y desarrollo a medida.</p>
-              <p class="plan__price">
-                <span class="plan__currency">$</span><span class="plan__amount" data-monthly="49" data-yearly="39.2">49</span>
-                <span class="plan__period">/mes</span>
-              </p>
-            </header>
-            <ul class="plan__features">
-              <li><svg class="ic"><use href="#i-check" /></svg> VPS dedicado 8 GB RAM</li>
-              <li><svg class="ic"><use href="#i-check" /></svg> Desarrollo a medida</li>
-              <li><svg class="ic"><use href="#i-check" /></svg> Anti-DDoS avanzado</li>
-              <li><svg class="ic"><use href="#i-check" /></svg> Monitoreo y alertas</li>
-              <li><svg class="ic"><use href="#i-check" /></svg> Gestor de cuenta</li>
-            </ul>
-            <a class="btn btn--ghost btn--block" href="https://discord.gg/imperioshop" data-discord target="_blank" rel="noopener">Hablar con ventas</a>
-          </article>
+        <div class="tabs__contenido">
+          <div class="tabs__panel" data-panel="bots" role="tabpanel">
+            <div class="grid grid--3 plans">
+            <article class="plan reveal">
+                      <header class="plan__head">
+                        <h3>Bot Básico</h3>
+                        <p class="plan__desc">Para empezar con tu primera comunidad.</p>
+                        <p class="plan__price">
+                          <span class="plan__currency">$</span>
+            <span class="plan__amount">8</span>
+                          <span class="plan__period">pago único</span>
+                        </p>
+                      </header>
+                      <ul class="plan__features">
+                        <li><svg class="ic"><use href="#i-check" /></svg> Comandos esenciales (moderación y bienvenida)</li>
+                        <li><svg class="ic"><use href="#i-check" /></svg> Panel de configuración simple</li>
+                        <li><svg class="ic"><use href="#i-check" /></svg> Hosting incluido 24/7</li>
+                        <li><svg class="ic"><use href="#i-check" /></svg> Soporte por tickets</li>
+                      </ul>
+                      <a class="btn btn--primary btn--block" href="https://imperioshop.tebex.io" target="_blank" rel="noopener"><svg class="ic"><use href="#i-cart" /></svg> Comprar en Tebex</a>
+                    </article>
+            <article class="plan reveal plan--featured">
+                      <span class="plan__badge"><svg class="ic"><use href="#i-star" /></svg> El más elegido</span>
+                      <header class="plan__head">
+                        <h3>Bot Avanzado</h3>
+                        <p class="plan__desc">El equilibrio ideal entre potencia y precio.</p>
+                        <p class="plan__price">
+                          <span class="plan__currency">$</span>
+            <span class="plan__amount">16</span>
+                          <span class="plan__period">pago único</span>
+                        </p>
+                      </header>
+                      <ul class="plan__features">
+                        <li><svg class="ic"><use href="#i-check" /></svg> Todo lo del plan Básico</li>
+                        <li><svg class="ic"><use href="#i-check" /></svg> Sistemas de tickets y economía</li>
+                        <li><svg class="ic"><use href="#i-check" /></svg> Roles automáticos y registros</li>
+                        <li><svg class="ic"><use href="#i-check" /></svg> Panel web privado</li>
+                        <li><svg class="ic"><use href="#i-check" /></svg> Soporte prioritario</li>
+                      </ul>
+                      <a class="btn btn--primary btn--block" href="https://imperioshop.tebex.io" target="_blank" rel="noopener"><svg class="ic"><use href="#i-cart" /></svg> Comprar en Tebex</a>
+                    </article>
+            <article class="plan reveal">
+                      <header class="plan__head">
+                        <h3>Bot Pro</h3>
+                        <p class="plan__desc">Desarrollo a medida para proyectos grandes.</p>
+                        <p class="plan__price">
+                          <span class="plan__currency">$</span>
+            <span class="plan__amount">28</span>
+                          <span class="plan__period">pago único</span>
+                        </p>
+                      </header>
+                      <ul class="plan__features">
+                        <li><svg class="ic"><use href="#i-check" /></svg> Todo lo del plan Avanzado</li>
+                        <li><svg class="ic"><use href="#i-check" /></svg> Funciones a medida sin límite</li>
+                        <li><svg class="ic"><use href="#i-check" /></svg> Integraciones con APIs externas</li>
+                        <li><svg class="ic"><use href="#i-check" /></svg> Base de datos dedicada</li>
+                        <li><svg class="ic"><use href="#i-check" /></svg> Soporte directo con el desarrollador</li>
+                      </ul>
+                      <a class="btn btn--primary btn--block" href="https://imperioshop.tebex.io" target="_blank" rel="noopener"><svg class="ic"><use href="#i-cart" /></svg> Comprar en Tebex</a>
+                    </article>
+            </div>
+          </div>
+          <div class="tabs__panel is-hidden" data-panel="hosting" hidden role="tabpanel">
+            <div class="grid grid--3 plans">
+            <article class="plan reveal plan--featured">
+                      <span class="plan__badge"><svg class="ic"><use href="#i-star" /></svg> Activación inmediata</span>
+                      <header class="plan__head">
+                        <h3>Hosting para bots</h3>
+                        <p class="plan__desc">Tu bot encendido 24/7, sin depender de tu PC.</p>
+                        <p class="plan__price">
+                          <span class="plan__currency">$</span>
+            <span class="plan__amount">5</span>
+                          <span class="plan__period">pago único</span>
+                        </p>
+                      </header>
+                      <ul class="plan__features">
+                        <li><svg class="ic"><use href="#i-check" /></svg> Encendido permanente 24/7</li>
+                        <li><svg class="ic"><use href="#i-check" /></svg> Panel de control propio</li>
+                        <li><svg class="ic"><use href="#i-check" /></svg> Copias de seguridad automáticas</li>
+                        <li><svg class="ic"><use href="#i-check" /></svg> Reinicio automático si se cae</li>
+                        <li><svg class="ic"><use href="#i-check" /></svg> Soporte por tickets</li>
+                      </ul>
+                      <a class="btn btn--primary btn--block" href="https://imperioshop.tebex.io" target="_blank" rel="noopener"><svg class="ic"><use href="#i-cart" /></svg> Comprar en Tebex</a>
+                    </article>
+            </div>
+          </div>
+          <div class="tabs__panel is-hidden" data-panel="web" hidden role="tabpanel">
+            <div class="grid grid--4 plans">
+            <article class="plan reveal">
+                      <header class="plan__head">
+                        <h3>Web Inicial</h3>
+                        <p class="plan__desc">Presencia profesional en una sola página.</p>
+                        <p class="plan__price">
+                          <span class="plan__currency">$</span>
+            <span class="plan__amount">16</span>
+                          <span class="plan__period">pago único</span>
+                        </p>
+                      </header>
+                      <ul class="plan__features">
+                        <li><svg class="ic"><use href="#i-check" /></svg> Una página completa</li>
+                        <li><svg class="ic"><use href="#i-check" /></svg> Diseño adaptado a celular</li>
+                        <li><svg class="ic"><use href="#i-check" /></svg> Formulario de contacto</li>
+                        <li><svg class="ic"><use href="#i-check" /></svg> Entrega en 5 días</li>
+                      </ul>
+                      <a class="btn btn--primary btn--block" href="https://imperioshop.tebex.io" target="_blank" rel="noopener"><svg class="ic"><use href="#i-cart" /></svg> Comprar en Tebex</a>
+                    </article>
+            <article class="plan reveal">
+                      <header class="plan__head">
+                        <h3>Web Profesional</h3>
+                        <p class="plan__desc">Varias secciones y catálogo de servicios.</p>
+                        <p class="plan__price">
+                          <span class="plan__currency">$</span>
+            <span class="plan__amount">32</span>
+                          <span class="plan__period">pago único</span>
+                        </p>
+                      </header>
+                      <ul class="plan__features">
+                        <li><svg class="ic"><use href="#i-check" /></svg> Hasta 5 secciones</li>
+                        <li><svg class="ic"><use href="#i-check" /></svg> Catálogo de servicios o productos</li>
+                        <li><svg class="ic"><use href="#i-check" /></svg> Optimización para Google</li>
+                        <li><svg class="ic"><use href="#i-check" /></svg> Entrega en 8 días</li>
+                      </ul>
+                      <a class="btn btn--primary btn--block" href="https://imperioshop.tebex.io" target="_blank" rel="noopener"><svg class="ic"><use href="#i-cart" /></svg> Comprar en Tebex</a>
+                    </article>
+            <article class="plan reveal">
+                      <header class="plan__head">
+                        <h3>Web Avanzada</h3>
+                        <p class="plan__desc">Con panel de administración propio.</p>
+                        <p class="plan__price">
+                          <span class="plan__currency">$</span>
+            <span class="plan__amount">48</span>
+                          <span class="plan__period">pago único</span>
+                        </p>
+                      </header>
+                      <ul class="plan__features">
+                        <li><svg class="ic"><use href="#i-check" /></svg> Panel para que edites tu contenido</li>
+                        <li><svg class="ic"><use href="#i-check" /></svg> Base de datos incluida</li>
+                        <li><svg class="ic"><use href="#i-check" /></svg> Formularios y registro de usuarios</li>
+                        <li><svg class="ic"><use href="#i-check" /></svg> Entrega en 12 días</li>
+                      </ul>
+                      <a class="btn btn--primary btn--block" href="https://imperioshop.tebex.io" target="_blank" rel="noopener"><svg class="ic"><use href="#i-cart" /></svg> Comprar en Tebex</a>
+                    </article>
+            <article class="plan reveal plan--featured">
+                      <span class="plan__badge"><svg class="ic"><use href="#i-star" /></svg> Tienda completa</span>
+                      <header class="plan__head">
+                        <h3>Web Premium</h3>
+                        <p class="plan__desc">Tienda completa con pagos en línea.</p>
+                        <p class="plan__price">
+                          <span class="plan__currency">$</span>
+            <span class="plan__amount">64</span>
+                          <span class="plan__period">pago único</span>
+                        </p>
+                      </header>
+                      <ul class="plan__features">
+                        <li><svg class="ic"><use href="#i-check" /></svg> Carrito y pagos integrados</li>
+                        <li><svg class="ic"><use href="#i-check" /></svg> Gestión de pedidos y clientes</li>
+                        <li><svg class="ic"><use href="#i-check" /></svg> Panel de administración completo</li>
+                        <li><svg class="ic"><use href="#i-check" /></svg> Entrega en 18 días</li>
+                      </ul>
+                      <a class="btn btn--primary btn--block" href="https://imperioshop.tebex.io" target="_blank" rel="noopener"><svg class="ic"><use href="#i-cart" /></svg> Comprar en Tebex</a>
+                    </article>
+            </div>
+          </div>
         </div>
 
         <p class="plans__note reveal">
           <svg class="ic"><use href="#i-shield" /></svg>
-          Todos los planes incluyen garantía de 7 días y migración sin costo.
+          Pago seguro gestionado por Tebex. Los precios están en dólares (USD) y no
+          incluyen impuestos locales.
         </p>
       </div>
     </section>
-
     <!-- ================= MÉTRICAS / MARCAS ================= -->
     <section class="marquee-brand reveal" aria-label="Tecnologías que usamos">
       <div class="wrap marquee-brand__inner">
@@ -616,10 +729,10 @@
             intermedios ni respuestas automáticas.
           </p>
           <div class="contact__actions">
-            <a class="btn btn--primary" href="https://discord.gg/imperioshop" data-discord target="_blank" rel="noopener">
+            <a class="btn btn--primary" href="https://discord.gg/cffbceYF2" data-discord target="_blank" rel="noopener">
               <svg class="ic"><use href="#i-bot" /></svg> Abrir ticket en Discord
             </a>
-            <button class="btn btn--ghost" type="button" id="copyDiscord" data-copy="discord.gg/imperioshop">
+            <button class="btn btn--ghost" type="button" id="copyDiscord" data-copy="discord.gg/cffbceYF2">
               <svg class="ic"><use href="#i-ticket" /></svg> <span id="copyLabel">Copiar invitación</span>
             </button>
           </div>
@@ -660,7 +773,7 @@
 
       <div class="site-footer__col">
         <h3>Comunidad</h3>
-        <a href="https://discord.gg/imperioshop" data-discord target="_blank" rel="noopener">Discord oficial</a>
+        <a href="https://discord.gg/cffbceYF2" data-discord target="_blank" rel="noopener">Discord oficial</a>
         <a href="#contacto">Soporte</a>
         <a href="#planes">Estado del servicio</a>
       </div>
